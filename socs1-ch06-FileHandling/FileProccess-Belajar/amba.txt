@@ -1,3 +1,0 @@
-Halo,biji,2,0,1,He
-Hoiiii,baju,9,0,1,Holo
-Huf,boa,1,0,1,Hilu

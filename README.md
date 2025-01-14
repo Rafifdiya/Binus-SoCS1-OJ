@@ -1,1 +1,1 @@
-Repository for storing problems and solutions for C programming assignments on SOCS1 Binus online judge. 
+Repository for storing problems and solutions for C programming assignments on SoCS1 Binus online judge. 

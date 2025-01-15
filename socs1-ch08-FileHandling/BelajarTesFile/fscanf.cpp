@@ -8,11 +8,18 @@ int main() {
         return 1;
     }
 
-    int angka;
-    if (fscanf(fp, "%d", &angka) == 1) { // Berhasil membaca satu angka
-        printf("Angka di file: %d\n", angka);
-    } else {
-        printf("Tidak ada data yang bisa dibaca di file.\n");
+    int a, b, c;
+    char str1[100], str2[100];
+
+    // Membaca dan menampilkan data dengan fgets dan sscanf
+    while (fgets(str1, sizeof(str1), fp)) {
+        if (sscanf(str1, "%d %d %s", &a, &b, str2) == 3) {
+            printf("%d %d %s\n", a, b, str2);  // Menampilkan baris pertama dan kedua
+        } else if (sscanf(str1, "%s %s %d", str1, str2, &c) == 3) {
+            printf("%s %s %d\n", str1, str2, c);  // Menampilkan baris kedua
+        } else if (sscanf(str1, "%d", &a) == 1 ) {
+            printf("%d\n", a);  // Menampilkan integer di baris ketiga dan keempat
+        }
     }
 
     fclose(fp);

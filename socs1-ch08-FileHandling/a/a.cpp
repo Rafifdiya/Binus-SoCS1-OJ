@@ -17,6 +17,7 @@ int main(){
     
     int N, T;
     char buffer[40];
+    
     DataTeman datake[40];
 
     //Baca jumlah data pada baris pertama

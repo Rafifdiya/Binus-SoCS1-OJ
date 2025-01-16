@@ -3,27 +3,27 @@
 
 struct Mahasigma
 {
-	char NIM[15];
+	char NIM[11];
 	char Name[45];
 };
 
 int main(){
-	Mahasigma mhs[1010];
-	FILE *fp; 
-	fp = fopen("testdata.in", "r");
-	int n;
-	fscanf(fp, "%d\n", &n);
+	Mahasigma mhs[101];
+	FILE *fp = fopen("testdata2.in", "r");
+
+	int banyak_mahasiswa;
+	fscanf(fp, "%d\n", &banyak_mahasiswa);
 	
 	//Membaca NIM dan nama Mahasiswa/i
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < banyak_mahasiswa; i++)
 	{
 		fscanf(fp, "%s %s\n", mhs[i].NIM, mhs[i].Name);
 	}
 	
 	//Bubble sort
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < banyak_mahasiswa; i++)
 	{
-		for (int j = 0; j < n - 1 - i; j++ )
+		for (int j = 0; j < banyak_mahasiswa - 1 - i; j++ )
 		{
 			if (strcmp(mhs[j].NIM, mhs[j+1].NIM) > 0)
 			{
@@ -35,7 +35,7 @@ int main(){
 	}
 	
 	//Menampilkan hasil
-	for (int i = 0; i < n; i++){
+	for (int i = 0; i < banyak_mahasiswa; i++){
 		printf("%s %s\n", mhs[i].NIM, mhs[i].Name);
 	}
 	
